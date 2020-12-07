@@ -1,0 +1,47 @@
+server:
+  port: 20010
+
+# DataSource Config
+spring:
+  datasource:
+    name: fendo
+    url: jdbc:mysql://rm-bp1349z8ay2u070sfmo.mysql.rds.aliyuncs.com:3306/wxb-3rd?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Hongkong
+    username: seven_dev
+    password: 7dian7fen_dev
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+  # jackson时间格式化
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+# Logger Config
+logging:
+  level:
+    com.baomidou.mybatisplus.samples.deluxe: debug
+
+mybatis-plus:
+  # 扫描 mapper.xml
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  #MyBaits 别名包扫描路径，通过该属性可以给包中的类注册别名
+  #type-aliases-package:
+  #项目启动会检查xml配置存在(只在开发时候打开)
+  check-config-location: true
+  # 是否开启自动驼峰命名规则（camel case）映射，即从经典数据库列名 A_COLUMN（下划线命名） 到经典 Java 属性名 aColumn（驼峰命名） 的类似映射
+  map-underscore-to-camel-case: true
+  configuration:
+    jdbc-type-for-null: 'null' #可以更新为空值
+
+
+
+
+doctor:
+  xiaoe_id: p_5d19d1df2b04a_ab9wth7w
+  type: 4
+  temp_code: SMS_168826961
+  course_name: 人人必学的家庭健康课
+  source: PAHYS
+  ips:  114.80.247.1,43.254.104.1,117.184.218.1,101.227.58.1,223.167.108.1,117.186.254.1,61.164.32.26
+remote:
+  send_course_url: http://www.wxbpdapp.com/play/send_course.do
+

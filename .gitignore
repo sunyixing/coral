@@ -1,0 +1,40 @@
+HELP.md
+business/coral-business-common/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+
+
+### IntelliJ IDEA ###
+*.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/
+.gitignore
+business/coral-business-generator/target/
+business/coral-business-register-helper/target/
+Would skip repository business/coral-business-register/src/main/java/com/coral/business/myTestDemo/
+business/coral-business-register/target/
+business/coral-business-start-helper/target/
+business/coral-business-start/target/
+/.gitignore
+!/.gitignore

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coral.business.mapper.WechatInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.coral.business.entity.WechatInfo">
+        <id column="id" property="id" />
+        <result column="openid" property="openid" />
+        <result column="avatarUrl" property="avatarUrl" />
+        <result column="city" property="city" />
+        <result column="country" property="country" />
+        <result column="gender" property="gender" />
+        <result column="language" property="language" />
+        <result column="nickName" property="nickName" />
+        <result column="province" property="province" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, openid, avatarUrl, city, country, gender, language, nickName, province
+    </sql>
+
+</mapper>
