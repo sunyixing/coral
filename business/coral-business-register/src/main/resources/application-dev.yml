@@ -5,7 +5,7 @@ server:
 spring:
   datasource:
     name: fendo
-    url: jdbc:mysql://192.168.2.28:5127/coral?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Hongkong
+    url: jdbc:mysql://192.168.100.19:3306/training?characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Hongkong
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -14,6 +14,20 @@ spring:
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
+  #出现错误时, 直接抛出异常
+  mvc:
+    throw-exception-if-no-handler-found: true
+    static-path-pattern: /*
+  #配置上传文件大小 maxFileSize是单个文件大小  maxRequestSize是设置总上传的数据大小
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  #不要为我们工程中的资源文件建立映射,加上此配置，404错误能够封装，但是swagger访问不了
+  #  resources:
+  #    add-mappings: false
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
 
 # Logger Config
 logging:
