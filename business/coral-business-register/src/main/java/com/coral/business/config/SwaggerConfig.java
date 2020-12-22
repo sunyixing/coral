@@ -32,7 +32,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.wxbpd.exterior.exterior.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.coral.business.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -44,10 +44,10 @@ public class SwaggerConfig {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("平安好医生接口服务")
-                .description("平安好医生swagger接口文档")
-                .termsOfServiceUrl("http://www.wxbpdapp.com")
-                .contact(new Contact("sunyixing", "http://www.wxbpdapp.com", "1152309544@qq.com"))
+                .title("杭州信条信息技术有限公司——珊瑚礁商户系统接口服务")
+                .description("珊瑚礁商户系统swagger接口文档")
+//                .termsOfServiceUrl("http://www.wxbpdapp.com")
+//                .contact(new Contact("sunyixing", "http://www.wxbpdapp.com", "1152309544@qq.com"))
                 .version("1.0")
                 .build();
     }
